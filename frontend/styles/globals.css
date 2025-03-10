@@ -2,6 +2,15 @@
 
 
 
+.container {
+    /* max-width: 1320px; */
+    max-width: 1400px;
+    margin: auto;
+}
+
+
+
+
 .projects{
    padding: 0 60px 90px 60px;
 }
@@ -198,10 +207,11 @@
 
 
 /* blogs */
+
 .recentblogs {
     position: relative;
     padding: 120px 1rem;
-    background: #b3b3b3;
+    background: #bbbbbb;
 }
 
 .dark .recentblogs {
@@ -279,4 +289,21 @@
     font-weight: 600;
 }
 
+
 /* blogs */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

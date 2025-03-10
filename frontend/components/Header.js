@@ -4,14 +4,14 @@ import Link from 'next/link'
 const Header = () => {
     return (
         <nav className="flex items-center justify-between p-5">
-            <div className="flex items-center justify-between bg-transparent  w-full">
+            <div className="flex items-center justify-between bg-transparent  w-[85vw]">
 
                 <div className="w-20 h-20">
                     <img src="https://res.cloudinary.com/dyikkz1ur/image/upload/v1739973643/blog/file_1739973642190.png" alt="DreamHost logo" className="w-[100%] h-[100%] object-contain" />
                 </div>
 
 
-                <ul className="flex gap-4 font-bold">
+                <ul className="bg-amber-300 flex gap-4">
                     <li className="">
                         <Link href="#">
                             Domains
