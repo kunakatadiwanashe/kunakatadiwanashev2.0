@@ -6,6 +6,9 @@ import { useEffect, useState } from "react";
 import { GoArrowUpRight } from "react-icons/go";
 import Link from "next/link";
 import { FaCalendarDays } from "react-icons/fa6";
+import Footer from "@/components/Footer";
+import About from "@/components/About";
+import MySkills from "@/components/MySkills";
 
 
 
@@ -75,14 +78,15 @@ export default function Home() {
 
 
       <Banner />
+      <About />
+      <MySkills />
 
 
       <section className="projects">
         <div className="container">
-          <div className="project_titles">
-            <h2 className="My Work"></h2>
-            <p className="">work hard</p>
-          </div>
+
+          <h2 className="text-center text-2xl font-bold pt-7 pb-10 text-[#fff] hed">Some of my finest work</h2>
+
 
           <div className="project_buttons">
             <button className={selectedCategory === 'ALL' ? 'active' : ''} onClick={() => handleCategoryChange('ALL')}>All</button>
@@ -93,7 +97,7 @@ export default function Home() {
 
           <div className="projects_cards">
             {loading ? <Spinner /> : (
-              alldata.slice(0, 3).map((project) => (
+              alldata.slice(0, 4).map((project) => (
                 <Link href='/' key={project._id} className="procard">
                   <div className="proimgbox">
                     <img src={project.images[0]} alt={project.title} />
@@ -109,14 +113,21 @@ export default function Home() {
         </div>
       </section>
 
+
+
+
+
       <section className="recentblogs">
         <div className="container mx-auto px-4 py-8">
 
-          <h2 className="text-3xl font-bold text-center mb-2">Recent Articles</h2>
-          <p className="text-center text-gray-600 mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+          <div className="pl-20">
+
+            <h2 className="text-2xl font-extrabold pt-7 pb-4 text-[#0668D5;] hed">Recent Articles</h2>
+            <p className="mb-8 Para text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
 
 
 
+          </div>
 
 
 
@@ -127,7 +138,7 @@ export default function Home() {
               return <Link href={`/blogs/${blog.slug}`} key={blog._id} className="relative max-w-sm rounded overflow-hidden shadow-lg bg-white h-[70vh]">
 
                 <div className="w-full h-[50%]">
-                <img src={blog.images[0] || '../public/img/noimage.png'} alt={blog.title} className="w-[100%] h-[100%] object-cover" />
+                  <img src={blog.images[0] || '../public/img/noimage.png'} alt={blog.title} className="w-[100%] h-[100%] object-cover" />
                 </div>
                 <span className="cat">{blog.blogcategory[0]}</span>
 
@@ -140,7 +151,7 @@ export default function Home() {
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                     sed do eiusmod tempor incididunt ut labore.
                   </p>
-                 <div className="flex pt-3 items-center"> <FaCalendarDays /> <span className="pl-3 font-thin ">{formatDate(new Date(blog.createdAt))}</span></div>
+                  <div className="flex pt-3 items-center"> <FaCalendarDays /> <span className="pl-3 font-thin ">{formatDate(new Date(blog.createdAt))}</span></div>
                   <div className="pt-4 pb-2">
                     <a href="#" className="text-orange-500 font-bold">Read More</a>
                   </div>
@@ -155,17 +166,13 @@ export default function Home() {
 
           </div>
 
-
-
-
-
-
-
-
         </div>
       </section>
 
 
+
+
+      <Footer />
 
     </>
   );
