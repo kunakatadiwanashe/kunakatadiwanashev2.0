@@ -1,16 +1,16 @@
-import Head from "next/head";
+// import Head from "next/head";
 
-export default function shopslug() {
+// export default function shopslug() {
 
    
-    return <>
-    <Head>
-        <title>Shop Page</title>
-    </Head>
+//     return <>
+//     <Head>
+//         <title>Shop Page</title>
+//     </Head>
         
-        <div className="shopslugpage">
+//         <div className="shopslugpage">
           
-        </div>
+//         </div>
 
-    </>
-}
+//     </>
+// }
