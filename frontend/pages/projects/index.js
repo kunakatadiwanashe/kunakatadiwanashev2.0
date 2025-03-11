@@ -1,14 +1,11 @@
-// import Head from "next/head";
+import Head from "next/head";
 
-// export default function projects() {
+export default function projects() {
 
     
-//     return <>
-//         <Head>
-//             <title>Project</title>
-//         </Head>
-//         <div className="projectpage">
-            
-//         </div>
-//     </>
-// }
+    return <>
+        <div className="">
+        <h1>Projects Page</h1>
+        </div>
+    </>
+}
