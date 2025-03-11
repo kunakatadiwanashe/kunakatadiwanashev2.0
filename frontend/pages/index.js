@@ -7,6 +7,8 @@ import { GoArrowUpRight } from "react-icons/go";
 import Link from "next/link";
 import { FaCalendarDays } from "react-icons/fa6";
 
+
+
 export default function Home() {
   const [loading, setLoading] = useState(true);
   const [alldata, setAlldata] = useState([]);
@@ -71,7 +73,9 @@ export default function Home() {
         <link rel="shortcut icon" type="image/png" href="/public/images/logo.png" />
       </Head>
 
+
       <Banner />
+
 
       <section className="projects">
         <div className="container">
@@ -106,30 +110,63 @@ export default function Home() {
       </section>
 
       <section className="recentblogs">
-        <div className="container">
-          <div className="myskills_title">
-            <h2 className="">recent blogs</h2>
-          </div>
-          <div className="recent_blogs">
+        <div className="container mx-auto px-4 py-8">
+
+          <h2 className="text-3xl font-bold text-center mb-2">Recent Articles</h2>
+          <p className="text-center text-gray-600 mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+
+
+
+
+
+
+          <div className="flex flex-wrap justify-center gap-6 ">
+
+
             {allwork.slice(0, 3).map((blog) => {
-              return <Link href={`/blogs/${blog.slug}`} key={blog._id} className="re_blog">
-                <div className="re_blogimg">
-                  <img src={blog.images[0] || '../public/img/noimage.png'} alt={blog.title} />
-                  <span className="">{blog.blogcategory[0]}</span>
+              return <Link href={`/blogs/${blog.slug}`} key={blog._id} className="relative max-w-sm rounded overflow-hidden shadow-lg bg-white h-[70vh]">
+
+                <div className="w-full h-[50%]">
+                <img src={blog.images[0] || '../public/img/noimage.png'} alt={blog.title} className="w-[100%] h-[100%] object-cover" />
                 </div>
-                <div className="re_bloginfo">
-                  <div className="re_topdate flex gap-1">
-                    <div className="res_date">
-                      <FaCalendarDays /> <span>{formatDate(new Date(blog.createdAt))}</span>
-                    </div>
+                <span className="cat">{blog.blogcategory[0]}</span>
+
+
+
+                <div className="px-6 py-4">
+
+                  <h2 className="font-bold text-xl mb-2">{blog.title}</h2>
+                  <p className="text-gray-700 text-base">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore.
+                  </p>
+                 <div className="flex pt-3 items-center"> <FaCalendarDays /> <span className="pl-3 font-thin ">{formatDate(new Date(blog.createdAt))}</span></div>
+                  <div className="pt-4 pb-2">
+                    <a href="#" className="text-orange-500 font-bold">Read More</a>
                   </div>
-                  <h2 className="">{blog.title}</h2>
                 </div>
+
+
+
+
               </Link>
             })}
+
+
           </div>
+
+
+
+
+
+
+
+
         </div>
       </section>
+
+
+
     </>
   );
 }
