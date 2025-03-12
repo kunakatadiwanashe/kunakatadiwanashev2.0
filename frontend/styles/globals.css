@@ -12,14 +12,18 @@
 
 @font-face {
   font-family: 'Para';
-  src: url('/frontend/public/fonts/Calluna-Regular.otf') format('woff2'),
-       url('https://res.cloudinary.com/dyikkz1ur/raw/upload/v1741706169/kun/Portfolio/Fonts/Calluna-Regular_sqx8js.otf') format('woff');
+  src: url('/frontend/public/fonts/Raleway.ttf') format('woff2'),
+       url('https://res.cloudinary.com/dyikkz1ur/raw/upload/v1741784089/kun/Portfolio/Fonts/Raleway-VariableFont_wght_uekn2c.ttf') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap; /* Ensures text is visible while the font loads */
 }
 
 
+
+*{
+  font-family: 'Para';
+}
 
 
 .hed{
@@ -65,7 +69,9 @@
 #mb{
   margin-bottom:  0;
 }
-
+ .pp{
+  text-transform: lowercase;
+ }
 
 
 
@@ -91,7 +97,6 @@
 .project_titles h2 {
     font-size: 45px;
     background: linear-gradient(to right, var(--main-site-color) 0%, #dddddd 100%);
-    -webkit-text-fill-color: transparent;
     display: inline-flex;
     gap: 15px;
     margin-bottom: 0;
@@ -132,8 +137,9 @@
 .project_buttons button {
     background: #0668D5;
     color: #fff;
-    font-size: 20px;
-    padding: 8px 30px 8px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 30px 5px 30px;
     border: none;
     border-radius: 20px;
 }
@@ -156,9 +162,9 @@
 
 .procard {
     position: relative;
-    width: 30%;
-    height: 250px;
-    padding: 10px;
+    width: 32%;
+    height: 200px;
+    padding: 0px;
     background-color: #0668D5;
     margin-top: 3rem;
     border-radius: 12px;
@@ -287,4 +293,75 @@
 
 
 
+  @media screen and (max-width: 870px) {
+
+
+    .procard {
+        width: 100%;
+        height: auto;
+    }
+
+
+
+}
+
+@media screen and (max-width: 720px) {
+
+
+    .project_buttons {
+        flex-wrap: wrap;
+    }
+
+    .project_buttons button {
+        font-size: 16px;
+        padding: 0.8rem;
+    }
+
+
+    .projects {
+        padding: 8rem 1rem;
+    }
+
+}
+
+
+@media screen and (max-width: 600px) {
+
+
+    .project_titles {
+        margin-top: 0;
+    }
+
+ 
+}
+
+@media screen and (max-width: 500px) {
+
+    .procard {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 450px) {
+
+
+
+    .services {
+        padding-top: 3rem;
+    }
+
+    .project_titles h2,
+    .services_titles h2 {
+        font-size: 35px;
+    }
+
+    .project_titles p,
+    .services_titles p {
+        font-size: 15px;
+    }
+
+
+
+
+}
 
