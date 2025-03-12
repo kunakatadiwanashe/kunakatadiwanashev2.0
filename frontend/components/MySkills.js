@@ -4,7 +4,7 @@ const MySkills = () => {
   return (
 
 
-<section className="p-16">
+<section className="pb-10 md:p-16">
 <div className="flex flex-col md:flex-row bg-[#dcdcdcdb] shadow-lg rounded-lg overflow-hidden ">
       
       <div className="p-10 md:w-1/2 flex flex-col pt-30 ">

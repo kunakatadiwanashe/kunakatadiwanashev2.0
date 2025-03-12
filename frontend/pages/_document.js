@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <link rel="shortcut icon" type="image/png" href="/images/logobgwht.png" />
+        <link rel="shortcut icon" type="image/png" href="https://res.cloudinary.com/dyikkz1ur/image/upload/v1741790540/kun/Portfolio/icons/KunWhiteIcon_o2shgh.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Sora:wght@100..800&display=swap" rel="stylesheet" />

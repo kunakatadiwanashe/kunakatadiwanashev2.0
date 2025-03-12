@@ -51,22 +51,13 @@ const Footer = () => {
 
         <div className="thrd md:w-[30%] relative flex justify-end">
 
-        {/* <Image
-          src={fimg}
-          alt="tadiwanshe kunaka"
-          className="md:absolute md:left-[-250px] md:top-[-150px]  ml-[40px] md:ml-0 h-[30px] w-[250px] md:h-[280px] md:w-[800px]"
-        />
-        <Image
-          src={fimg}
-          alt="tadiwanshe kunaka"
-          className="md:absolute md:bottom-2 md-right-0 ml-[40px] md:ml-0 h-[30px] w-[250px] md:h-[280px] md:w-[800px]"
-        /> */}
+ 
 
 <img src="https://res.cloudinary.com/dyikkz1ur/image/upload/v1741686419/kun/Portfolio/icons/fimg_nl0vsl.png" alt="Portrait " 
-  className="md:absolute md:left-[-250px] md:top-[-150px]  ml-[40px] md:ml-0 h-[30px] w-[250px] md:h-[280px] md:w-[800px]"
+  className="md:absolute md:left-[-250px] md:top-[-90px]  ml-[40px] md:ml-0 h-[30px] w-[250px] md:h-[280px] md:w-[800px]"
 />
 
-<img src="https://res.cloudinary.com/dyikkz1ur/image/upload/v1741686419/kun/Portfolio/icons/fimg_nl0vsl.png" alt="Portrait "
+<img src="https://res.cloudinary.com/dyikkz1ur/image/upload/v1741785476/kun/Portfolio/icons/wg_tj7taa.png" alt="Portrait "
  className="md:absolute md:bottom-2 md-right-0 ml-[40px] md:ml-0 h-[30px] w-[250px] md:h-[280px] md:w-[800px]"
 />
 
