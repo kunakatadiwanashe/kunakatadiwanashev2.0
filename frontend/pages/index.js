@@ -8,6 +8,7 @@ import Link from "next/link";
 import { FaCalendarDays } from "react-icons/fa6";
 import About from "@/components/About";
 import MySkills from "@/components/MySkills";
+import Services from "@/components/Services";
 
 
 
@@ -78,7 +79,10 @@ export default function Home() {
 
       <Banner />
       <About />
+      <Services />
       <MySkills />
+
+      
 
 
       <section className="projects">
