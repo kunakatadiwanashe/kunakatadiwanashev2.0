@@ -6,9 +6,21 @@ export default function services() {
             <title>Services</title>
         </Head>
 
-        <div className="servicespage">
-            
-        </div>
+
+
+
+
+
+
+
 
     </>
-}
+};
+
+
+
+
+
+
+
+

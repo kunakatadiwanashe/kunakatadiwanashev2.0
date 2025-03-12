@@ -34,12 +34,12 @@ export default function MobMenu({ Menus }) {
         animate={{ x: isOpen ? "0%" : "-100%" }}
       >
         <ul className="text-center flex flex-col gap-4 text-xl justify-center">
-          <li><Link href="#home">Home</Link></li>
-          <li><Link href="#about">About</Link></li>
-          <li><Link href="#services">Services</Link></li>
-          <li><Link href="#contact">Blogs</Link></li>
-          <li><Link href="#services">Portfolio</Link></li>
-          <li><Link href="#contact">Contact</Link></li>
+        <li><a href="/">Home</a></li>
+            <li><Link href="/about">About</Link></li>
+            <li><Link href="#services">Services</Link></li>
+            <li><Link href="/blogs">Blogs</Link></li>
+            <li><Link href="/portfolio">Portfolio</Link></li>
+            <li><Link href="/contact">Contact</Link></li>
           <button className="inline-flex items-center justify-center px-6 text-base tracking-wide text-white bg-blue-500 rounded-lg mx-auto w-1/2 h-[35px]">
             Hire Me
           </button>
