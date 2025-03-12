@@ -1,3 +1,4 @@
+import Contact from "@/components/Contact";
 import Head from "next/head";
 
 export default function contact() {
@@ -7,6 +8,8 @@ export default function contact() {
         <Head>
             <title>Contact us</title>
         </Head>
+        
+        <Contact />
 
     </>
 }

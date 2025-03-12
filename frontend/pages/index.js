@@ -79,7 +79,7 @@ export default function Home() {
 
       <Banner />
       <About />
-      <Services />
+      <div id="services"><Services  /></div>
       <MySkills />
 
       

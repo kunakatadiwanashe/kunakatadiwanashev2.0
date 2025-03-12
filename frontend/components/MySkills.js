@@ -24,6 +24,22 @@ const MySkills = () => {
 
 
       <div className="flex gap-4">
+
+      <div class="grid grid-cols-1 ">
+          <div class="bbg h-13"> </div>
+          <div class="bbg h-[120px]">
+            <img src="https://res.cloudinary.com/dyikkz1ur/image/upload/v1741713449/kun/Portfolio/icons/wordpress_uzly6o.png" alt="" />
+          </div>
+          <div class="bbg h-[120px]">
+            <img src="https://res.cloudinary.com/dyikkz1ur/image/upload/v1741713448/kun/Portfolio/icons/js_ddyigu.png" alt="" />
+          </div>
+          <div class="bbg h-[120px]">
+            <img src="https://res.cloudinary.com/dyikkz1ur/image/upload/v1741713448/kun/Portfolio/icons/react-_qnrk0q.png" alt="" />
+          </div>
+          <div class="bbg h-4 "id="mb"></div>
+        </div>
+
+
         <div class="grid grid-cols-1 ">
           <div class="bbg h-6"></div>
           <div class="bbg h-[120px]">
@@ -66,6 +82,9 @@ const MySkills = () => {
           </div>
           <div class="bbg h-17 "id="mb"></div>
         </div>
+
+
+
 
       </div>
 
