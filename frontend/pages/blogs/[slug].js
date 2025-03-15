@@ -131,34 +131,35 @@ const BlogPage = () => {
     };
 
     return (
-        <>
+        <section section className="flex p-12">
             <Head>
                 <title>{slug}</title>
             </Head>
 
-            <div className="">
+            <div className="w-2/3">
                 {blogData && (
                     <div className="container">
                         <div className="blgslgcnt">
                             <div className="leftsitedetails">
-                                <div className="leftbloginfoimg">
+                                <div className="leftbloginfoimg flex">
                                     <img
                                         src={blogData.blog?.images?.[0] || 'https://res.cloudinary.com/dyikkz1ur/image/upload/v1742025979/kun/Portfolio/icons/noimage_rh1qy4.png'}
                                         alt={blogData.blog.title}
                                         onError={handleImageError}
+                                        className="w-[100%]"
                                     />
                                 </div>
 
                                 <div className="slugbloginfopub">
-                                    <div className="flex gap-2">
-                                        <div className="adminslug">
+                                    <div className="flex justify-between pb-5 w-1/2">
+                                        <div className="adminslug flex">
                                             <img
                                                 src="https://res.cloudinary.com/dyikkz1ur/image/upload/v1741684012/kun/Portfolio/icons/kunnn_yvu3r3.png"
                                                 alt="kun"
                                                 onError={handleImageError}
-                                                className="size-20"
+                                                className="size-10 object-cover rounded-full"
                                             />
-                                            <span className="">by kuntech</span>
+                                            <p className="pt-2.5 pl-1">by kuntech</p>
                                         </div>
                                         <div className="adminslug flex items-center gap-0.5">
                                             <SlCalender />
@@ -170,7 +171,10 @@ const BlogPage = () => {
                                         </div>
                                     </div>
 
-                                    <h1>{blogData.blog.title}</h1>
+                                   <div className="">
+                                   <h1 className="text-2xl font-bold">{blogData.blog.title}</h1>
+                                   <p className="p-4">{blogData.blog.description}</p>
+                                   </div>
                                     {loading ? <Spinner /> : (
                                         <ReactMarkdown
                                             children={blogData.blog.content}
@@ -192,18 +196,18 @@ const BlogPage = () => {
                                         />
                                     )}
 
-                                    <div className="b_comments">
-                                        <h2 className="">Comments</h2>
+                                    <div className="b_comments pt-3 ">
+                                        <h2 className="text-xl mb-">Comments ({blogData.comments ? blogData.comments.length : 0})</h2>
+                                        <hr className="w-40 bg-[#0668D5] h-1 border-transparent mb-5" />
                                         {blogData.comments.map(comment => (
-                                            <div key={comment._id} className="comment">
-                                                <h3>{comment.title}</h3>
-                                                <p>{comment.contentpera}</p>
-                                                <p>By: {comment.name}</p>
+                                            <div key={comment._id} className="comment pl-4">
+                                                <p className="border pb-1">{comment.contentpera}</p>
+                                                <h5 className="text-[10px] font-bold mb-2 pl-3 italic text-[#0668D5]">By: {comment.name}   {comment.createdAt}  </h5>
                                                 {comment.children && comment.children.map(child => (
                                                     <div key={child._id} className="child-comment">
-                                                        <h4>{child.title}</h4>
-                                                        <p>{child.contentpera}</p>
+                                                      
                                                         <p>By: {child.name}</p>
+                                                        <p>{child.contentpera}</p>
                                                     </div>
                                                 ))}
                                             </div>
@@ -211,9 +215,9 @@ const BlogPage = () => {
                                     </div>
 
 
-                                    <form className="" onSubmit={handleCommentSubmit}>
-                                        <p className="">your email will not be published </p>
-                                        <div className="w-full max-w-lg p-6 bg-gray-800 rounded-lg shadow-md">
+                                    <form className="pt-10 services w-1/2 text-white" onSubmit={handleCommentSubmit}>
+                                        <p className="pl-6">your email will not be published </p>
+                                        <div className="w-full max-w-lg p-6 rounded-lg shadow-md">
                                             <form onSubmit={handleCommentSubmit} className="flex space-x-4 mb-4">
                                                 <input
                                                     type="text"
@@ -230,7 +234,7 @@ const BlogPage = () => {
                                                     className="w-1/2 p-3 bg-gray-700 text-white rounded-md focus:outline-none"
                                                 />
                                             </form>
-                                            <div className="mb-4">
+                                            {/* <div className="mb-4">
                                                 <input
                                                     type="text"
                                                     placeholder="Enter Title"
@@ -238,7 +242,7 @@ const BlogPage = () => {
                                                     onChange={(e) => setNewComment({ ...newComment, title: e.target.value })}
                                                     className="w-full p-3 bg-gray-700 text-white rounded-md focus:outline-none"
                                                 />
-                                            </div>
+                                            </div> */}
                                             <div className="mb-4">
                                                 <textarea
                                                     placeholder="Enter Your Comments"
@@ -247,7 +251,7 @@ const BlogPage = () => {
                                                     className="w-full p-3 bg-gray-700 text-white rounded-md focus:outline-none h-32"
                                                 ></textarea>
                                             </div>
-                                            <button type="submit" className="w-full p-3 bg-purple-600 text-white rounded-md hover:bg-purple-700 focus:outline-none" >
+                                            <button type="submit" className="w-full p-3 bg-[#0668D5] text-white rounded-md hover:bg-[#8bc1ff] focus:outline-none font-bold" >
                                                 POST COMMENT
                                             </button>
                                             {messageok && <p className="text-green-500">{messageok}</p>}
@@ -262,8 +266,14 @@ const BlogPage = () => {
                         </div>
                     </div>
                 )}
+
+                
             </div>
-        </>
+
+            {/* <div className="w-1/3 h-full bg-blue-500">ku</div> */}
+
+
+        </section>
     );
 };
 

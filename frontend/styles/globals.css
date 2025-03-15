@@ -23,6 +23,7 @@
 
 *{
   font-family: 'Para';
+  text-transform: capitalize;
 }
 
 
@@ -373,3 +374,12 @@
 
 }
 
+
+
+
+
+
+
+
+
+/* blog slug */
