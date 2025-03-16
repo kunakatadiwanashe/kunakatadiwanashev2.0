@@ -131,12 +131,12 @@ const BlogPage = () => {
     };
 
     return (
-        <section section className="flex p-12">
+        <section section className="flex md:p-12">
             <Head>
                 <title>{slug}</title>
             </Head>
 
-            <div className="w-2/3">
+            <div className="mt-5 md:w-2/3">
                 {blogData && (
                     <div className="container">
                         <div className="blgslgcnt">
@@ -151,7 +151,7 @@ const BlogPage = () => {
                                 </div>
 
                                 <div className="slugbloginfopub">
-                                    <div className="flex justify-between pb-5 w-1/2">
+                                    <div className="flex flex-wrap justify-between pb-5 w-1/2">
                                         <div className="adminslug flex">
                                             <img
                                                 src="https://res.cloudinary.com/dyikkz1ur/image/upload/v1741684012/kun/Portfolio/icons/kunnn_yvu3r3.png"
@@ -201,8 +201,9 @@ const BlogPage = () => {
                                         <hr className="w-40 bg-[#0668D5] h-1 border-transparent mb-5" />
                                         {blogData.comments.map(comment => (
                                             <div key={comment._id} className="comment pl-4">
-                                                <p className="border pb-1">{comment.contentpera}</p>
-                                                <h5 className="text-[10px] font-bold mb-2 pl-3 italic text-[#0668D5]">By: {comment.name}   {comment.createdAt}  </h5>
+                                                
+                                                <h5 className="text-[10px] font-bold italic text-[#0668D5]">@ {comment.name}   {comment.createdAt}  </h5>
+                                                <p className=" pb-1">{comment.contentpera}</p>
                                                 {comment.children && comment.children.map(child => (
                                                     <div key={child._id} className="child-comment">
                                                       
@@ -215,7 +216,7 @@ const BlogPage = () => {
                                     </div>
 
 
-                                    <form className="pt-10 services w-1/2 text-white" onSubmit={handleCommentSubmit}>
+                                    <form className="pt-10 services mb-5 md:w-1/2 text-white" onSubmit={handleCommentSubmit}>
                                         <p className="pl-6">your email will not be published </p>
                                         <div className="w-full max-w-lg p-6 rounded-lg shadow-md">
                                             <form onSubmit={handleCommentSubmit} className="flex space-x-4 mb-4">
@@ -234,15 +235,7 @@ const BlogPage = () => {
                                                     className="w-1/2 p-3 bg-gray-700 text-white rounded-md focus:outline-none"
                                                 />
                                             </form>
-                                            {/* <div className="mb-4">
-                                                <input
-                                                    type="text"
-                                                    placeholder="Enter Title"
-                                                    value={newComment.title}
-                                                    onChange={(e) => setNewComment({ ...newComment, title: e.target.value })}
-                                                    className="w-full p-3 bg-gray-700 text-white rounded-md focus:outline-none"
-                                                />
-                                            </div> */}
+                  
                                             <div className="mb-4">
                                                 <textarea
                                                     placeholder="Enter Your Comments"

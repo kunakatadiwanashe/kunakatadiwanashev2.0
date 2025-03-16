@@ -26,6 +26,11 @@
   text-transform: capitalize;
 }
 
+.container{
+  padding-left: 8%;
+  padding-right:  8%;
+}
+
 
 .hed{
   font-family: 'Hed', sans-serif;
