@@ -93,7 +93,7 @@ export default function Home() {
           <div className="projects_cards">
             {loading ? <Spinner /> : (
               filteredProjects.slice(0, 4).map((project) => (
-                <Link href='/' key={project._id} className="procard">
+                <Link href={`/projects/${project.slug}`} key={project._id} className="procard">
                   <div className="proimgbox">
                     <img src={project.images[0]} alt={project.title} />
                   </div>
