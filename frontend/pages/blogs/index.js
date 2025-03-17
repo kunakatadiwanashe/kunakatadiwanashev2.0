@@ -52,23 +52,20 @@ export default function Blogs() {
 
             <div className="blogpage">
                 <div className="tophero">
-                    <div className="container">
 
-
-
-                        <div className="pt-10 pb-10">
+                <div className="services pt-10 pb-10 pl-20 text-white">
                             <h1 className="text-5xl md:text-6xl font-bold mb-4">
                                 Welcome to <span className="text-[#0668D5]">KunTech Blogs</span>!
                             </h1>
-                            <p className="text-lg md:text-xl text-gray-400 mb-2">
+                            <p className="text-lg md:text-xl  mb-2">
                                 I write about web, mobile development and modern JavaScript frameworks.
                             </p>
 
-                            <div className="flex items-center w-full max-w-md">
+                            <div className="flex items-center w-full max-w-md border border-white rounded-full mt-5">
                                 <input
                                     type="text"
                                     placeholder="Search blogs here..."
-                                    className="flex-grow p-3 rounded-l-full bg-gray-800 text-gray-300 focus:outline-none"
+                                    className="flex-grow p-3 rounded-l-full focus:outline-none text-white"
                                 />
                                 <button className="p-3 bg-[#0668D5] hover:bg-[#0668D5] text-white rounded-r-full">
                                     Search
@@ -77,13 +74,13 @@ export default function Blogs() {
                         </div>
 
 
-
+                    <div className="container">
 
                         <div className="featured h-[390px] relative">
                             <div className="md:container">
-                                <div className=" relative pt-2 pb-[14rem] ">
+                                <div className=" relative pt-2 pb-[14rem] md:pb-[1rem] ">
                                     <div className="postTitle flex justify-between">
-                                        <h3 className='text-2xl pb-4 hed '>Featured Post</h3>
+                                        <h3 className='text-2xl pb-4  hed '>Featured Post</h3>
                                     </div>
                                     <div className="featuredPosts flex">
                                         <Swiper
@@ -136,7 +133,7 @@ export default function Blogs() {
 
 
 
-            <section className=" w-full md:p-20 mt-20">
+            <section className=" w-full md:p-20 mt-20 md:mt-2">
                 <div className="container">
 
                     <div className="latestpostsdat">
