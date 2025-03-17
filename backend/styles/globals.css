@@ -483,11 +483,8 @@
 
 .addblogspage {
     position: relative;
-    /* max-width: 1650px;
-    margin: auto; */
     height: 100%;
     margin-top: 120px;
-    /* margin-left: 200px; */
     padding: 2rem;
 }
 
@@ -498,7 +495,7 @@
 
 /* blog component */
 .addWebsiteform {
-    width: 100%;
+   
     background-color: #f6f6f6;
     padding: 2rem;
     border-radius: 15px;
@@ -557,11 +554,6 @@
     background-color: #7734d3;
 }
 
-.description button {
-    width: 100px;
-    padding: 10px 15px;
-    font-size: 15px;
-}
 
 
 /* ********************************************** */

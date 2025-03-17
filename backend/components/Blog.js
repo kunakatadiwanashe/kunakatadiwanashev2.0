@@ -115,8 +115,11 @@ export default function Blog(
     }
 
     return (
-        <form className="addWebsiteform" onSubmit={createBlog}>
-            <div className="w-100 flex flex-col flex-left mb-2">
+        <form className="addWebsiteform w-2/3" onSubmit={createBlog}>
+
+
+<div className="w-full flex justify-between">
+<div className="w-100 flex flex-col flex-left mb-2">
                 <label htmlFor="title">Title</label>
                 <input
                     type="text"
@@ -140,8 +143,9 @@ export default function Blog(
                     onChange={ev => setSlug(ev.target.value)}
                 />
             </div>
+</div>
 
-            <div className="w-100 flex flex-col flex-left mb-2">
+            <div className="w-full flex flex-col flex-left mb-2 hidden">
                 <label htmlFor="description">Description</label>
                 <input
                     type="text"
@@ -152,7 +156,10 @@ export default function Blog(
                 />
             </div>
 
-            <div className="w-100 flex flex-col flex-left mb-2">
+
+
+
+<div className="w-full flex flex-col flex-left mb-2">
                 <label htmlFor="category">Select Category</label>
                 <select
                     className="form-select"
@@ -166,7 +173,7 @@ export default function Blog(
                 </select>
             </div>
 
-            <div className="w-100 flex flex-col flex-left mb-2">
+<div className="w-full flex flex-col flex-left mb-2">
                 <label htmlFor="status">Status</label>
                 <select
                     className="form-select"
@@ -178,7 +185,11 @@ export default function Blog(
                 </select>
             </div>
 
-            <div className="w-100 flex flex-col flex-left mb-2">
+
+
+
+
+<div className="w-100 flex flex-col flex-left mb-2">
                 <label htmlFor="images">Images</label>
                 <input
                     type="file"
@@ -215,7 +226,7 @@ export default function Blog(
 
 
 
-            <div className="description w-100 flex flex-col flex-left mb-2">
+            <div className="w-full flex flex-col flex-left ">
                 <label htmlFor="description">Blog Content</label>
                 <MarkdownEditor
                     value={description}
@@ -229,9 +240,9 @@ export default function Blog(
                 />
             </div>
 
-            <div className="w-100">
+            <div className="w-100 ">
                 <button type="submit" className="inline-flex items-center justify-center px-8 py-4 font-sans font-semibold tracking-wide text-white bg-blue-500 rounded-lg h-[60px]">
-                    Save Blog
+                    Add Blog
                 </button>
             </div>
         </form>

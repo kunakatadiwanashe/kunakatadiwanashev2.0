@@ -8,17 +8,41 @@ const Contact = () => {
                 <h1 className="text-6xl font-bold mb-4 text-[#0668D5]">Contact Us</h1>
                 <p className="text-gray-600 mb-6 w-[80%]">Feel free to use the form or drop us an email. Old-fashioned phone calls work too.</p>
                 <div className="mb-4">
-                    <i className="fas fa-phone-alt text-[#0668D5]"></i>
+                    <i className="fas fa-phone-alt text-3xl text-[#0668D5]"></i>
                     <span className="ml-2 text-gray-800">+263 779 968 190</span>
                 </div>
                 <div className="mb-4">
-                    <i className="fas fa-envelope text-[#0668D5]"></i>
+                    <i className="fas fa-envelope text-3xl text-[#0668D5]"></i>
                     <span className="ml-2 text-gray-800">kunakatadiwanashe99@gmail.com</span>
                 </div>
                 <div className="mb-4">
-                    <i className="fas fa-map-marker-alt text-[#0668D5]"></i>
+                    <i className="fas fa-map-marker-alt text-3xl text-[#0668D5]"></i>
                     <span className="ml-2 text-gray-800">15731 Kuwadzana 6<br />Harare, Zimbabwe</span>
                 </div>
+                <div className="mb-4">
+                    <i className="fas fa-linkedin text-3xl text-[#0668D5]"></i>
+                    <span className="ml-2 text-gray-800">@kunakatadiwanashe</span>
+                </div>
+                <div className="mb-4">
+                    <i className="fas fa-instagram text-3xl text-[#0668D5]"></i>
+                    <span className="ml-2 text-gray-800">@kunakatadiwanashe</span>
+                </div>
+                <div className="mb-4">
+                    <i className="fas fa-facebook text-3xl text-[#0668D5]"></i>
+                    <span className="ml-2 text-gray-800">@kunakatadiwanashe</span>
+                </div>
+                <div className="mb-4">
+                    <i className="fas fa-twitter text-3xl text-[#0668D5]"></i>
+                    <span className="ml-2 text-gray-800">@kunakatadiwanashe</span>
+                </div>
+
+
+
+
+
+
+
+
             </div>
 
 
