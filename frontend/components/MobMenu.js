@@ -38,11 +38,11 @@ export default function MobMenu({ Menus }) {
             <li><Link href="/about">About</Link></li>
             <li><Link href="#services">Services</Link></li>
             <li><Link href="/blogs">Blogs</Link></li>
-            <li><Link href="/portfolio">Portfolio</Link></li>
+            <li><Link href="/projects">Portfolio</Link></li>
             <li><Link href="/contact">Contact</Link></li>
-          <button className="inline-flex items-center justify-center px-6 text-base tracking-wide text-white bg-blue-500 rounded-lg mx-auto w-1/2 h-[35px]">
+          <Link href="/contact"  className="inline-flex items-center justify-center px-6 text-base tracking-wide text-white bg-blue-500 rounded-lg mx-auto w-1/2 h-[35px]">
             Hire Me
-          </button>
+          </Link>
 
           <div className="w-[20rem] h-[20rem] ml-8">
             <img src="https://res.cloudinary.com/dyikkz1ur/image/upload/v1741789709/kun/Portfolio/icons/KunLogoWhite_utpeih.png" alt="Logo" className="w-[100%] h-[100%] object-cover" />

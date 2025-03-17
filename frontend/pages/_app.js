@@ -31,11 +31,11 @@ export default function App({ Component, pageProps }) {
             <li><a href="/about">About</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="/blogs">Blogs</a></li>
-            <li><a href="/portfolio">Portfolio</a></li>
+            <li><a href="/projects">Portfolio</a></li>
             <li><a href="/contact">Contact</a></li>
-            <button className="inline-flex items-center justify-center px-6 text-base tracking-wide text-white bg-blue-500 rounded-lg h-[35px]">
+            <Link href="/contact" className="inline-flex items-center justify-center px-6 text-base tracking-wide text-white bg-blue-500 rounded-lg h-[35px]">
               Hire Me
-            </button>
+            </Link>
           </ul>
 
         </div>

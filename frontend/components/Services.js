@@ -27,51 +27,57 @@ const Services = () => {
                     <section>
 
                         <div class="group relative overflow-hidden w-full h-20  transition-all duration-300 hover:h-28 border-b border-white">
-                            <div class="p-4">
+                            <div class="p-4 flex justify-between items-center">
                                 <h3 class="text-white text-lg font-bold">Branding</h3>
-                            </div>
-                            <p class="absolute top-0 left-0 right-0 p-4  text-whiteopacity-0 transform translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 h-[100%] text-right flex justify-end items-center">
+                                <p class="">
                             UI/UX design is designing user interfaces for a great user experience.
                             </p>
+                                
+                            </div>
+
                         </div>
 
 
                         <div class="group relative overflow-hidden w-full h-20  transition-all duration-300 hover:h-28 border-b border-white">
-                            <div class="p-4">
+                            <div class="p-4  flex justify-between items-center">
                                 <h3 class="text-white text-lg font-bold">UI/UX Design</h3>
-                            </div>
-                            <p class="absolute top-0 left-0 right-0 p-4  text-white opacity-0 transform translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 h-[100%] text-right flex justify-end items-center">
+                                <p class="">
                                 UI/UX design is designing user interfaces for a great user experience.
                             </p>
+                            </div>
+
                         </div>
 
 
                         <div class="group relative overflow-hidden w-full h-20 transition-all duration-300 hover:h-28 border-b border-white">
-                            <div class="p-4">
+                            <div class="p-4  flex justify-between items-center">
                                 <h3 class="text-white text-lg font-bold">Development</h3>
-                            </div>
-                            <p class="absolute top-0 left-0 right-0 p-4  text-white opacity-0 transform translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 h-[100%] text-right flex justify-end items-center">
+                                <p class="">
                                 UI/UX design is designing user interfaces for a great user experience.
                             </p>
+                            </div>
+
                         </div>
 
                         <div class="group relative overflow-hidden w-full h-20  transition-all duration-300 hover:h-28 border-b border-white">
-                            <div class="p-4">
+                            <div class="p-4  flex justify-between items-center">
                                 <h3 class="text-white text-lg font-bold">Graphic Design</h3>
-                            </div>
-                            <p class="absolute top-0 left-0 right-0 p-4  text-white opacity-0 transform translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 h-[100%] text-right flex justify-end items-center">
+                                <p class="">
                                 UI/UX design is designing user interfaces for a great user experience.
                             </p>
+                            </div>
+
                         </div>
 
 
                         <div class="group relative overflow-hidden w-full h-20   transition-all duration-300 hover:h-28 border-b border-white">
-                            <div class="p-4">
+                            <div class="p-4  flex justify-between items-center">
                                 <h3 class="text-white text-lg font-bold">SEO</h3>
-                            </div>
-                            <p class="absolute top-0 left-0 right-0 p-4  text-white opacity-0 transform translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 h-[100%] text-right flex justify-end items-center">
+                                <p class="">
                                 UI/UX design is designing user interfaces for a great user experience.
                             </p>
+                            </div>
+
                         </div>
 
 

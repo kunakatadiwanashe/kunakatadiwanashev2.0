@@ -11,6 +11,7 @@
   "dependencies": {
     "@auth/mongodb-adapter": "^2.5.2",
     "@prisma/client": "^6.4.1",
+    "@tailwindcss/postcss": "^4.0.11",
     "@types/faker": "5.5.9",
     "aos": "^2.3.4",
     "backend_port": "file:",
@@ -37,5 +38,10 @@
     "react-spinners": "^0.13.8",
     "sortablejs": "^1.15.2",
     "yarn": "^1.22.22"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.0.14"
   }
 }
