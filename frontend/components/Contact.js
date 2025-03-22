@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 const Contact = () => {
     return (
 
@@ -20,19 +21,21 @@ const Contact = () => {
                     <span className="ml-2 text-gray-800">15731 Kuwadzana 6<br />Harare, Zimbabwe</span>
                 </div>
                 <div className="mb-4">
-                    <i className="fas fa-linkedin text-3xl text-[#0668D5]"></i>
+                   
+                    <i class="fa-brands fa-linkedin  text-3xl text-[#0668D5]"></i>
                     <span className="ml-2 text-gray-800">@kunakatadiwanashe</span>
                 </div>
                 <div className="mb-4">
-                    <i className="fas fa-instagram text-3xl text-[#0668D5]"></i>
+                 
+                    <i class="fa-brands fa-facebook  text-3xl text-[#0668D5]"></i>
                     <span className="ml-2 text-gray-800">@kunakatadiwanashe</span>
                 </div>
                 <div className="mb-4">
-                    <i className="fas fa-facebook text-3xl text-[#0668D5]"></i>
+                    <i class="fa-brands fa-square-instagram  text-3xl text-[#0668D5]"></i>
                     <span className="ml-2 text-gray-800">@kunakatadiwanashe</span>
                 </div>
                 <div className="mb-4">
-                    <i className="fas fa-twitter text-3xl text-[#0668D5]"></i>
+                    <i class="fa-brands fa-square-twitter text-3xl text-[#0668D5]"></i>
                     <span className="ml-2 text-gray-800">@kunakatadiwanashe</span>
                 </div>
 

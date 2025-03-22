@@ -8,39 +8,43 @@ import toast from 'react-hot-toast';
 import axios from 'axios';
 import { ReactSortable } from 'react-sortablejs';
 import Link from 'next/link';
+import { FaHtml5, FaCss3, FaSass, FaWordpress, FaJs, FaPython } from "react-icons/fa";
 
-export default function Project(
-
-    {
-        _id,
-        title: existingTitle,
-        slug: existingSlug,
-        images: existingImages,
-        description: existingDescription,
-        productcategory: existingProductCategory,
-        tags: existingTags,
-        client: existingClient,
-        status: existingStatus,
-
-
-
-    }) {
-
-
+export default function Project({
+    _id,
+    title: existingTitle,
+    slug: existingSlug,
+    images: existingImages,
+    description: existingDescription,
+    productcategory: existingProductCategory,
+    tags: existingTags,
+    client: existingClient,
+    status: existingStatus,
+}) {
     const [redirect, setRedirect] = useState(false);
     const router = useRouter();
-    const [title, setTitle] = useState('');
-    const [slug, setSlug] = useState('');
-    const [images, setImages] = useState([]);
-    const [description, setDescription] = useState('');
-    const [projectcategory, setProjectCategory] = useState('');
-    const [client, setClient] = useState('');
+    const [title, setTitle] = useState(existingTitle || '');
+    const [slug, setSlug] = useState(existingSlug || '');
+    const [images, setImages] = useState(existingImages || []);
+    const [description, setDescription] = useState(existingDescription || '');
+    const [projectcategory, setProjectCategory] = useState(existingProductCategory || '');
+    const [client, setClient] = useState(existingClient || '');
     const [livepreview, setLivePreview] = useState('');
-    const [tags, setTags] = useState([]);
-    const [status, setStatus] = useState('draft');
+    const [tags, setTags] = useState(existingTags || []);
+    const [status, setStatus] = useState(existingStatus || 'draft');
     const [isUploading, setIsUploading] = useState(false);
     const uploadImagesQueue = [];
-    
+
+    // Mapping of tags to icons
+    const tagIcons = {
+        Html: <FaHtml5 />,
+        Css: <FaCss3 />,
+        Sass: <FaSass />,
+        Wordpress: <FaWordpress />,
+        Javascript: <FaJs />,
+        Typescript: <FaJs />, // You can use the same icon for Typescript or import a different one
+        Python: <FaPython />,
+    };
 
     async function createProject(ev) {
         ev.preventDefault();
@@ -116,9 +120,6 @@ export default function Project(
         toast.success('Image deleted successfully');
     }
 
-
-
-
     const handleSlugChange = (ev) => {
         const input = ev.target.value;
         const slug = input.toLowerCase().replace(/\s+/g, '-');
@@ -141,8 +142,7 @@ export default function Project(
                 />
             </div>
 
-           {/* client name */}
-
+            {/* client name */}
             <div className="w-100 flex flex-col flex-left mb-2">
                 <label htmlFor="client">Client Name</label>
                 <input
@@ -154,9 +154,8 @@ export default function Project(
                 />
             </div>
 
-                       {/* preview */}
-
-                       <div className="w-100 flex flex-col flex-left mb-2">
+            {/* preview */}
+            <div className="w-100 flex flex-col flex-left mb-2">
                 <label htmlFor="live preview">Live Preview</label>
                 <input
                     type="text"
@@ -166,9 +165,6 @@ export default function Project(
                     onChange={ev => setLivePreview(ev.target.value)}
                 />
             </div>
-
-
-
 
             <div className="w-100 flex flex-col flex-left mb-2">
                 <label htmlFor="description">Description</label>
@@ -196,23 +192,36 @@ export default function Project(
                 </select>
             </div>
 
-
             <div className="w-100 flex flex-col flex-left mb-2">
                 <label htmlFor="tags">Tags</label>
                 <select
                     className="form-select"
-                    onChange={ev => setTags(ev.target.value)}
+                    multiple // Enable multiple selection
+                    onChange={ev => {
+                        // Convert selected options into an array of values
+                        const selectedTags = Array.from(ev.target.selectedOptions, option => option.value);
+                        setTags(selectedTags);
+                    }}
                     value={tags}
                 >
                     <option value="">Tags</option>
-                    <option value="Html">Html</option>
+                    <option value="Html">Html  </option>
+                    <option value="Css">Css</option>
+                    <option value="Sass">Sass</option>
+                    <option value="Wordpress">Wordpress</option>
                     <option value="Javascript ">Javascript </option>
                     <option value="Typescript">Typescript</option>
-                    
+                    <option value="Python">Python</option>
                 </select>
+                <div className="flex flex-wrap gap-2 mt-2">
+                    {tags.map((tag, index) => (
+                        <div key={index} className="flex items-center gap-1 bg-gray-200 px-2 py-1 rounded">
+                            {tagIcons[tag]}
+                            <span>{tag}</span>
+                        </div>
+                    ))}
+                </div>
             </div>
-
-
 
             <div className="w-100 flex flex-col flex-left mb-2">
                 <label htmlFor="status">Status</label>
@@ -236,9 +245,7 @@ export default function Project(
                     multiple onChange={uploadImages}
                 />
                 {isUploading && (<MoonLoader color="#36d7b7" />)}
-
             </div>
-
 
             {!isUploading && (
                 <div className="flex">
@@ -250,18 +257,9 @@ export default function Project(
                                 <button type="button" className="rounded-full p-1" onClick={() => handleDeleteImage(index)}>X</button>
                             </div>
                         ))}
-
-
                     </ReactSortable>
                 </div>
             )}
-
-
-
-
-
-
-
 
             <div className="description w-100 flex flex-col flex-left mb-2">
                 <label htmlFor="description">Project Content</label>
@@ -285,12 +283,3 @@ export default function Project(
         </form>
     );
 }
-
-
-
-
-
-
-
-
-
