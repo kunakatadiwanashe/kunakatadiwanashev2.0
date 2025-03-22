@@ -96,7 +96,7 @@ export default function Projects() {
                                 publishedblogs.map((blog, index) => (
                                     <tr key={blog.id}>
                                         <td>{indexOfFirstBlog + index + 1}</td>
-                                        <td><img src={blog.images[0]} width={180} alt={blog.title} className="img-thumbnail" /></td>
+                                        <td><img src={blog.images[0]} width={180} alt={blog.title} className="img-thumbnail h-[20vh] object-cover object-top" /></td>
                                         <td> <h3>{blog.title}</h3> </td>
                                         <td>
                                             <div className="flex gap-2 flex-center ">

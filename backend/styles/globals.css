@@ -16,6 +16,23 @@
     margin-top: 100px;padding: 30px; 
 }
 
+.form-select[multiple] {
+    height: auto;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.form-select[multiple] option {
+    padding: 8px;
+}
+
+
+
+
+
+
+
 
 .header {
     width: 100%;

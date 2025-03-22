@@ -37,7 +37,7 @@ const Projects = ({ alldata }) => {
                         alldata.slice(0, 6).map(pro => (
                             <div className="procard" key={pro._id}>
                                 <div className="proImgbox">
-                                    <img src={pro.projectimage} alt={pro.projectname} />
+                                    <img src={pro.projectimage} alt={pro.projectname} className='' />
                                 </div>
                                 <div className="procontentbox">
                                     <h2>{pro.projectname}</h2>

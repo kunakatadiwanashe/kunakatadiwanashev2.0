@@ -10,6 +10,7 @@ const projectSchema = new Schema({
     status: { type: String, },
     client: { type: String, },
     livepreview: { type: String, },
+   
     
 }, {
     timestamps: true,
