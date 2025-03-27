@@ -4,7 +4,8 @@ import React from 'react'
 const Contact = () => {
     return (
 
-        <div className="flex flex-col md:flex-row justify-between container">
+        <div className="flex flex-col md:flex-row justify-between pl-[10%] pr-[10%]">
+
             <div className="md:w-1/3 pt-40">
                 <h1 className="text-6xl font-bold mb-4 text-[#0668D5]">Contact Us</h1>
                 <p className="text-gray-600 mb-6 w-[80%]">Feel free to use the form or drop us an email. Old-fashioned phone calls work too.</p>
@@ -50,7 +51,7 @@ const Contact = () => {
 
 
 
-            <div className="md:w-2/3 p-4">
+            <div className="md:w-2/3 p-4 pl-[1rem]">
                 <form className="space-y-4 p-4 rounded-lg shadow-md mt-4">
                     <div className="flex space-x-4">
                         <div className="flex-1">
@@ -131,6 +132,9 @@ const Contact = () => {
                     </div>
                 </form>
             </div>
+
+
+
         </div>
 
 

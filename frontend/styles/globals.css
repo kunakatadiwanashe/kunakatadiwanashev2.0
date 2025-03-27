@@ -19,6 +19,9 @@
   font-display: swap; /* Ensures text is visible while the font loads */
 }
 
+body{
+  overflow-x: hidden;
+}
 
 
 *{

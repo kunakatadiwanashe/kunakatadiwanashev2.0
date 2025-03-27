@@ -16,7 +16,7 @@
     "aos": "^2.3.4",
     "axios": "^1.7.2",
     "cookie-parser": "^1.4.6",
-    "framer-motion": "^12.5.0",
+    "framer-motion": "^12.6.2",
     "frontend_portfolio": "file:",
     "gsap": "^3.12.5",
     "jsonwebtoken": "^9.0.2",
