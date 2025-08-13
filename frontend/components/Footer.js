@@ -1,68 +1,56 @@
 import React from 'react'
-import Image from "next/image";
 import Link from "next/link";
-import tadiwa from "../public/img/noimage.png";
-import footer from "../public/img/noimage.png";
-
-import fimg from "../public/img/noimage.png"
-
-
-import { FaFacebook } from "react-icons/fa";
+import { FaFacebook, FaGithub, FaWhatsapp } from "react-icons/fa";
 import { TiSocialLinkedinCircular } from "react-icons/ti";
-import { FaGithub } from "react-icons/fa";
-import { FaWhatsapp } from "react-icons/fa";
-
-
 
 const Footer = () => {
   return (
-    <div className='relative bg-gradient-to-r from-[#1c233f] to-[#2a3867] h-[100vh] md:h-[55vh] flex flex-col md:flex-row'>
+    <div className='relative bg-gradient-to-r from-[#1c233f] to-[#2a3867] flex flex-col md:flex-row items-center md:items-start p-6 md:p-12'>
 
+      {/* First Section */}
+      <div className="frst md:w-2/5 flex flex-col justify-center items-center md:items-start mb-8 md:mb-0">
+        <p className='text-[12px] md:text-[14px] text-white text-center md:text-left mb-4 md:mb-6 max-w-sm'>
+          A Frontend focused Web Developer building the Frontend of
+          Websites and Web Applications that leads 
+          to the success of the overall product
+        </p>
+        <button className='text-[13px] md:text-[14px] text-white mb-6 md:mb-8 font-bold border border-white px-4 py-2 rounded hover:bg-white hover:text-[#1c233f] transition'>
+          -- VIEW RESUME
+        </button>
+        <img 
+          src="https://res.cloudinary.com/dyikkz1ur/image/upload/v1741686176/kun/Portfolio/icons/tadiwa_ahy0a9.png" 
+          alt="Portrait" 
+          className='w-36 md:w-48 rounded-full'
+        />
+      </div>
 
-
-        <div className="frst md:w-[40%] flex flex-col justify-center md:justify-left pl-5 pr-5 md:pl-[50px] pt-[30px]">
-
-            <p className='text-[12px] text-white text-center md:text-left pb-5 md:pb-6 md:text-[14px] md:w-[80%]'>
-            A Frontend focused Web Developer building the Frontend of
-             Websites and Web Applications that leads 
-             to the success of the overall product
-            </p>
-            <button className='text-[13px] text-white mb-8 md:mb-16 font-bold'>-- VIEW RESUME</button>
-
-        <img src="https://res.cloudinary.com/dyikkz1ur/image/upload/v1741686176/kun/Portfolio/icons/tadiwa_ahy0a9.png" alt="Portrait "   />
-
+      {/* Second Section */}
+      <div className="sec md:w-1/3 flex flex-col items-center md:items-start mb-8 md:mb-0">
+        <h3 className='text-white text-[12px] md:text-[14px] font-bold mb-3'>Socials</h3>
+        <div className='flex justify-between w-48 md:w-40 mb-4'>
+          <Link href="#" className='text-white'><FaFacebook size={30} /></Link>
+          <Link href="#" className='text-white'><FaGithub size={30} /></Link>
+          <Link href="#" className='text-white'><TiSocialLinkedinCircular size={30} /></Link>
+          <Link href="#" className='text-white'><FaWhatsapp size={30} /></Link>
         </div>
+        <h4 className='text-white text-sm md:text-base'>+263 779 968 190</h4>
+        <h4 className='text-white text-sm md:text-base'>+263 718 998 415</h4>
+      </div>
 
-        <div className="sec flex text-center md:text-left justify-center flex-col md:pb-11 md:pl-10 md:justify-end h-80 md:h-[100%] md:w-[30%]">
-          <h3 className='text-white pb-4 text-[12px] md:text-[14px] font-bold'>socials</h3>
-          <div className='flex justify-between pl-[35px] pr-[35px] md:pl-0 md:w-[50%] pb-4 '>
+      {/* Third Section */}
+      <div className="thrd md:w-2/5 relative flex justify-center md:justify-end">
+        <img 
+          src="https://res.cloudinary.com/dyikkz1ur/image/upload/v1741686419/kun/Portfolio/icons/fimg_nl0vsl.png" 
+          alt="Background Image 1" 
+          className="w-60 md:w-[800px] h-auto md:absolute md:left-[-150px] md:top-[-50px] mb-4"
+        />
+        <img 
+          src="https://res.cloudinary.com/dyikkz1ur/image/upload/v1741785476/kun/Portfolio/icons/wg_tj7taa.png" 
+          alt="Background Image 2" 
+          className="w-60 md:w-[800px] h-auto md:absolute md:bottom-2 md:right-0"
+        />
+      </div>
 
-          <Link href="" className='text-white'><FaFacebook size={37} /></Link>
-          <Link href="" className='text-white'><FaGithub size={37}  /></Link>
-          <Link href="" className='text-white'><TiSocialLinkedinCircular size={37}  /></Link>
-          <Link href="" className='text-white'><FaWhatsapp size={37}  /></Link>
-          
-          
-          
-          </div>
-          <h4 className='text-white'>+263 779 968 190</h4>
-          <h4 className='text-white'>+263 718 998 415</h4>
-        </div>
-
-        <div className="thrd md:w-[30%] relative flex justify-end">
-
- 
-
-<img src="https://res.cloudinary.com/dyikkz1ur/image/upload/v1741686419/kun/Portfolio/icons/fimg_nl0vsl.png" alt="Portrait " 
-  className="md:absolute md:left-[-250px] md:top-[-90px]  ml-[40px] md:ml-0 h-[30px] w-[250px] md:h-[280px] md:w-[800px]"
-/>
-
-<img src="https://res.cloudinary.com/dyikkz1ur/image/upload/v1741785476/kun/Portfolio/icons/wg_tj7taa.png" alt="Portrait "
- className="md:absolute md:bottom-2 md-right-0 ml-[40px] md:ml-0 h-[30px] w-[250px] md:h-[280px] md:w-[800px]"
-/>
-
-        </div>
-      
     </div>
   )
 }
