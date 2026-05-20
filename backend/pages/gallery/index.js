@@ -11,7 +11,7 @@ export default function Gallery() {
     const [currentPage, setCurrentPage] = useState(1);
     const [perPage] = useState(7);
     const [searchQuery, setSearchQuery] = useState('');
-    const { alldata, loading } = useFetchData('/api/gallery');
+    const { alldata = [], loading } = useFetchData('/api/gallery');
 
     useEffect(() => {
         console.log('Fetched data:', alldata);
@@ -21,9 +21,11 @@ export default function Gallery() {
         setCurrentPage(pageNumber);
     }
 
-    const allblog = alldata.length;
+    const allblog = alldata?.length ?? 0;
 
-    const filteredBlogs = searchQuery.trim() === ' ' ? alldata : alldata.filter(blog => blog.title.toLowerCase().includes(searchQuery.toLowerCase()));
+
+    const filteredBlogs = searchQuery.trim() === '' ? alldata : alldata.filter(blog => blog.title?.toLowerCase().includes(searchQuery.toLowerCase()));
+
 
     const indexOfFirstBlog = (currentPage - 1) * perPage;
     const indexOfLastBlog = currentPage * perPage;
@@ -33,9 +35,10 @@ export default function Gallery() {
     const publishedblogs = currentBlogs.filter(ab => ab.status === 'published');
 
     const pageNumber = [];
-    for (let i = 1; i <= Math.ceil(allphotos / perPage); i++) {
+    for (let i = 1; i <= Math.ceil(allblog / perPage); i++) {
         pageNumber.push(i);
     }
+
 
     return <>
         <div className="blogpage">
@@ -58,7 +61,8 @@ export default function Gallery() {
                         placeholder="search title"
                         className="border border-slate-200 rounded-lg py-3 px-5 outline-none	bg-transparent"
                         value={searchQuery}
-                        onChange={(e) => setGallery(e.target.value)}
+                        onChange={(e) => setSearchQuery(e.target.value)}
+
                     />
                 </div>
 

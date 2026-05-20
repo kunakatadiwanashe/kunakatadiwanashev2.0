@@ -57,7 +57,7 @@ export default function Photo(
             } else {
                 await axios.post('/api/photos', data);
                 toast.success('Photo created successfully');
-                router.push('/photos');
+                router.push('/gallery');
             }
         } catch (error) {
             console.error('Error creating/updating blog:', error);
