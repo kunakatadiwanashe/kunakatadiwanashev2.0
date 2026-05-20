@@ -22,6 +22,12 @@ function useFetchData(apiEndpoint) {
                 setAllData(alldata);
                 setLoading(false);
             } catch (error) {
+                console.error('useFetchData GET failed:', {
+                    apiEndpoint,
+                    message: error?.message,
+                    status: error?.response?.status,
+                    data: error?.response?.data,
+                });
                 setLoading(false);
             }
         }

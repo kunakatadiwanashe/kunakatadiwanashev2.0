@@ -59,20 +59,26 @@ export default async function handler(req, res) {
                 { title, slug, images, description, blogcategory, tags, status, comments },
                 { new: true }
             );
+
             if (!updatedBlog) {
                 return res.status(404).json({ message: 'Blog not found' });
             }
-            res.json(updatedBlog);
+
+            return res.json(updatedBlog);
         }
 
         if (method === 'DELETE') {
             if (req.query?.id) {
                 const deletedBlog = await Blog.findByIdAndDelete(req.query.id);
+
                 if (!deletedBlog) {
                     return res.status(404).json({ message: 'Blog not found' });
                 }
-                res.json({ message: 'Blog deleted successfully' });
+
+                return res.json({ message: 'Blog deleted successfully' });
             }
+
+            return res.status(400).json({ message: 'Missing id parameter' });
         }
     } catch (error) {
         console.error('Error in API handler:', error);

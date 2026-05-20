@@ -40,26 +40,33 @@ export default async function handler(req, res) {
         }
 
         if (method === 'PUT') {
-            const { _id, title, slug, images, } = req.body;
+            const { _id, title, slug, images } = req.body;
+
             const updatedPhoto = await Photo.findByIdAndUpdate(
                 _id,
-                { title, slug, images, description, blogcategory, tags, status, comments },
+                { title, slug, images },
                 { new: true }
             );
-            if (!updatedBlog) {
-                return res.status(404).json({ message: 'Blog not found' });
+
+            if (!updatedPhoto) {
+                return res.status(404).json({ message: 'Photo not found' });
             }
-            res.json(updatedBlog);
+
+            return res.json(updatedPhoto);
         }
 
         if (method === 'DELETE') {
             if (req.query?.id) {
-                const deletedBlog = await Blog.findByIdAndDelete(req.query.id);
-                if (!deletedBlog) {
-                    return res.status(404).json({ message: 'Blog not found' });
+                const deletedPhoto = await Photo.findByIdAndDelete(req.query.id);
+
+                if (!deletedPhoto) {
+                    return res.status(404).json({ message: 'Photo not found' });
                 }
-                res.json({ message: 'Blog deleted successfully' });
+
+                return res.json({ message: 'Photo deleted successfully' });
             }
+
+            return res.status(400).json({ message: 'Missing id parameter' });
         }
     } catch (error) {
         console.error('Error in API handler:', error);

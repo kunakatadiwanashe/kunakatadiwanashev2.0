@@ -6,8 +6,8 @@ import { SiBloglovin } from 'react-icons/si';
 import useFetchData from '../../hooks/useFetchData';
 import Dataloading from '../../components/Dataloading';
 
-
 export default function Draft() {
+
 
     const [currentPage, setCurrentPage] = useState(1);
     const [perPage] = useState(7);
@@ -51,18 +51,28 @@ export default function Draft() {
                 </div>
             </div>
             <div className="blogstable">
-                <div className="flex gap-2 mb-1">
-                    <h2 className="">search blog</h2>
-                    <input
-                        type="text"
-                        id="id"
-                        name="name"
-                        placeholder="search title"
-                        className="border border-slate-200 rounded-lg py-3 px-5 outline-none	bg-transparent"
-                        value={searchQuery}
-                        onChange={(e) => setSearchQuery(e.target.value)}
-                    />
+                <div className="flex gap-4 mb-4 items-center">
+                    <div className="flex gap-2">
+                        <h2 className="">search blog</h2>
+                        <input
+                            type="text"
+                            id="id"
+                            name="name"
+                            placeholder="search title"
+                            className="border border-slate-200 rounded-lg py-3 px-5 outline-none	bg-transparent"
+                            value={searchQuery}
+                            onChange={(e) => setSearchQuery(e.target.value)}
+                        />
+                    </div>
+
+                    <Link
+                        href="/blogs/addblog"
+                        className="inline-flex items-center justify-center px-4 py-3 font-sans font-semibold tracking-wide text-white bg-blue-500 rounded-lg h-[44px]"
+                    >
+                        Add Blog
+                    </Link>
                 </div>
+
 
                 <table className="table table-styling">
                     <thead>

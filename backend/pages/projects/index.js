@@ -7,6 +7,7 @@ import { FaEdit } from 'react-icons/fa';
 import Link from 'next/link';
 
 
+import AddProject from "./addproject"
 
 
 export default function Projects() {
@@ -50,6 +51,9 @@ export default function Projects() {
                 <div className="">
                     <h2 className="">All Projects</h2>
                     <h3 className="">admin panel</h3>
+
+
+                    <AddProject />
                 </div>
                 <div className="breadcrumb">
                     <SiBloglovin /> blogs

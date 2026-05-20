@@ -3,10 +3,16 @@ import { Project } from '@/models/Project';
 
 export default async function handler(req, res) {
     try {
+        console.log('[projects] method:', req.method);
+        console.log('[projects] MONGODB_URI present:', Boolean(process.env.MONGODB_URI));
+        console.log('[projects] query:', req.query);
+        console.log('[projects] body keys:', req.body ? Object.keys(req.body) : null);
+
         await mongooseConnect();
         console.log('Database connected successfully');
 
         const { method } = req;
+
 
 
         if (method === 'POST') {
@@ -53,22 +59,27 @@ export default async function handler(req, res) {
                 { new: true }
             );
             if (!updatedProject) {
-                return res.status(404).json({ message: 'Blog not found' });
+                return res.status(404).json({ message: 'Project not found' });
             }
-            res.json(updatedProject);
+            return res.json(updatedProject);
         }
 
         if (method === 'DELETE') {
             if (req.query?.id) {
                 const deletedProject = await Project.findByIdAndDelete(req.query.id);
+
                 if (!deletedProject) {
-                    return res.status(404).json({ message: 'Blog not found' });
+                    return res.status(404).json({ message: 'Project not found' });
                 }
-                res.json({ message: 'Blog deleted successfully' });
+
+                return res.json({ message: 'Project deleted successfully' });
             }
+
+            return res.status(400).json({ message: 'Missing id parameter' });
         }
     } catch (error) {
         console.error('Error in API handler:', error);
-        res.status(500).json({ message: 'Internal Server Error', error: error.message });
+        console.error('[projects] error stack:', error?.stack);
+        return res.status(500).json({ message: 'Internal Server Error', error: error?.message });
     }
 }
