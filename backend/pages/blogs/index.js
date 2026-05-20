@@ -87,7 +87,7 @@ export default function Blogs() {
                                 </tr>
                             ) : (
                                 publishedblogs.map((blog, index) => (
-                                    <tr key={blog.id}>
+                                    <tr key={blog._id}>
                                         <td>{indexOfFirstBlog + index + 1}</td>
                                         <td><img src={blog.images[0]} width={180} alt={blog.title} className="img-thumbnail" /></td>
                                         <td> <h3>{blog.title}</h3> </td>

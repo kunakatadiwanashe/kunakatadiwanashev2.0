@@ -90,7 +90,7 @@ export default function Photo(
     }
 
     if (redirect) {
-        router.push('/photos');
+        router.push('/gallery');
         return null;
     }
 

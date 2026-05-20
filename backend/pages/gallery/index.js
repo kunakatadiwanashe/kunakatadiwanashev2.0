@@ -93,7 +93,6 @@ export default function Gallery() {
                                         <td> <h3>{blog.title}</h3> </td>
                                         <td>
                                             <div className="flex gap-2 flex-center ">
-                                              
                                                 <Link href={'/photos/delete' + blog._id}><RiDeleteBin2Fill /></Link>
                                             </div>
                                         </td>

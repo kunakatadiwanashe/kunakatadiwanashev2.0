@@ -1,5 +1,5 @@
 import { mongooseConnect } from '@/lib/mongoose';
-import { Photo } from '@/models/Photo'; // Ensure this import is correct
+import { Photo } from '@/models/Photo';
 
 export default async function handler(req, res) {
     try {
